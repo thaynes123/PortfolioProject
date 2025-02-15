@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tessa Haynes Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+        header {
+        background-color: white;
+        color: white;
+        padding: 20px;
+        width: 100%;
+        top: 0;
+        position: fixed;
+        opacity: 70%;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+    padding: 8px 1px;
+  }
+  
+  .navbar a:hover {
+    color: #f4b400;
+    border-radius: 4px;
+  }
+  
+  /* Marquee Styles */
+  .marquee {
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px;
+    width: 10%;
+    box-sizing: border-box;
+  }
+
+        .portfolio .portfolio-grid a {text-decoration: none; color:#000;}
+
+        .portfolio .portfolio-grid a:hover {color:#f4b400;}
+
+        .hero {
+            text-align: center;
+            padding-top: 100px;
+            padding-left: 50px;
+            padding-bottom: 80px;
+        }
+        .hero h1 {
+            font-size: 6.5em;
+            text-align: left;
+            font-weight: bolder;
+        }
+        .hero span {
+            color: #f4b400;
+        }
+        .hero button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #000;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+        }
+       
+        .design-process, .portfolio, .contact {
+            padding:40px;
+            text-align: center;
+        }
+
+        .about p {
+            padding-top: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+            font-size: 1.2em;
+        }
+
+        .about h2 {
+            padding-left: 50px;
+            padding-bottom: 0px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+        }
+
+        .grid, .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card, .project {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .card, .project h3 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: left;
+        }
+        .card, .project p {
+            text-align: left;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        :root {
+  --height: 150px;
+  --speed: 30s;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="https://docs.google.com/document/d/1p92bY0OV2M970tK3Kqkh-zzX9lc1mFgBZt_W1u_P860/edit?usp=sharing" target="_blank">RESUME</a></li>
+            </ul>
+            <marquee class="marquee">HELLO HALLO HEJ HEJ HOLA CIAO HELLO HALLO HEJ HEJ HOLA CIAO HELLO HALLO HEJ HEJ HOLA CIAO HELLO HALLO HEJ HEJ HOLA CIAO</marquee>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Hi, I'm Tessa ;)</h1>
+        <h1>I design interactions and <span>experiences</span>.</h1>
+    </section>
+    
+    
+    <section class="design-process">
+        <img src="White Colorful Illustrative Mind Map Brainstorm.png" style="width:100%">
+      </section>
+    
+    <section class="portfolio" id="portfolio">
+        <h2>My Portfolio</h2>
+        <div class="portfolio-grid">
+            
+            <div class="project">
+                <img src="1.png" style="width:100%">
+                <a href="https://www.canva.com/design/DAGe8aqa0g4/gig0uQjgbYVeXlnn3C9FHw/view?utm_content=DAGe8aqa0g4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1065eebbe3" target="_blank">
+                <h3>Social Dance Near Me</h3>
+                <p>Case study of a web application made for and by Atlanta's social dancers.</p>
+                </a>
+            </div>
+            
+            <div class="project">
+                <img src="2.png" style="width:100%">
+                <a href="https://www.canva.com/design/DAGfI77lrPo/P_f3ufwSNRDm0B6Yy90HYw/view?utm_content=DAGfI77lrPo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4f6df9451c" target="_blank">
+                <h3>TutorVerse</h3>
+                <p>Case study of a multi-channel personalized AI tutor.</p>
+                </a>
+            </div>
+            <div class="project">
+                <img src="3.png" style="width:100%">
+                <a href="https://www.canva.com/design/DAGe8zAeizQ/XgeWS1dKWmSh_oc4AcAvtQ/view?utm_content=DAGe8zAeizQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6a931bfcee" target="_blank">
+                <h3>ShelfScout</h3>
+                <p>Case study of an application designed to build a bookish community around your local bookstore</p>
+                </a>
+            </div>
+            <div class="project">
+                <img src="4.png" style="width:100%">
+                <a href="https://docs.google.com/document/d/1XIbT9ctGMWtMedCtg2Rf43pt0s3L5_smOM8dkjxVEF0/edit?usp=sharing" target="_blank">
+                <h3>Multi-sensory Aids</h3>
+                <p>A short review of literature on mult-modal interfaces as navigational aids for enhancing spatial awareness in the visually impaired.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <h2>Here's a bit more about me:</h2>
+        <p>I'm addicted to Duolingo. I love to give people book recommendations. My preferred form of communication is movie quotes, but my passion is dance.</p>
+        <p>Growing up as a dancer, I’ve spent years observing, interpreting, and creating meaningful movements, and I’ve come to realize how deeply the principles of movement and flow apply to the design of digital experiences.</p>
+        <p>Dance has taught me to think about space, rhythm, and transitions—qualities that are essential in interaction design. When performing or choreographing, I find it imperative to consider how each gesture or movement connects with the next, how it feels in space, and how it influences the overall experience for an audience. In the same vein, as an interaction designer and user researcher, I approach digital interfaces with a similar mindset: designing smooth transitions, intuitive flows, and creating engaging, user-centric experiences that feel natural and responsive.</p>
+        <p>Through my dancing, I have also developed a deep understanding of empathy and body awareness. I’m able to perceive subtle nuances in how people respond to movement, and this translates well into the ability to understand how users interact with digital spaces and interfaces. I approach design with a focus on both functionality and emotional resonance, aiming to create experiences that users can not only navigate easily but also feel connected to on a deeper level.</p>
+        <p>Additionally, my experiences working with a team of dancers, choreographers, and artists has honed my ability to collaborate effectively, listen deeply, and offer constructive feedback—all of which I believe are crucial skills in a design environment. I am excited about the opportunity to bring my creative, detail-oriented, and collaborative approach to your team, and to continue learning and growing as an interaction designer and user researcher.</p>
+    </section>
+    
+    <section class="contact">
+       
+    </section>
+    
+    <footer>
+        <p>&copy; Tessa Haynes</p>
+    </footer>
+</body>
+</html>
