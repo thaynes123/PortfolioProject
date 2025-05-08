@@ -145,6 +145,26 @@ nav {
 }
 
 
+.typing {
+      font-size: 6rem;
+      color: #333;
+      border-right: 2px solid black;
+      white-space: nowrap;
+      overflow: hidden;
+      text-align: left;
+      height: 130px;
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: #333; }
+    }
+
+    .typing::after {
+      content: '';
+      animation: blink 0.7s infinite;
+    } 
+
     </style>
 </head>
 <body>
@@ -155,22 +175,62 @@ nav {
                 <li><a href="#portfolio">PORTFOLIO</a></li>
                 <li><a href="https://docs.google.com/document/d/1p92bY0OV2M970tK3Kqkh-zzX9lc1mFgBZt_W1u_P860/edit?usp=sharing" target="_blank">RESUME</a></li>
             </ul>
-            <marquee class="marquee">HELLO HALLO HEJ HEJ HOLA CIAO HELLO HALLO HEJ HEJ HOLA CIAO HELLO HALLO HEJ HEJ HOLA CIAO HELLO HALLO HEJ HEJ HOLA CIAO</marquee>
         </nav>
     </header>
     
     <section class="hero">
-        <h1>Hi, I'm Tessa ;)</h1>
-        <h1>I design interactions and <span>experiences</span>.</h1>
+
+        <div class="typing" id="type"></div>
+        <div style="visibility:hidden; position:absolute;">Hej Hej</div>
+
+  <script>
+    const words = ["HELLO", "HALLO", "HEJ HEJ", "HOLA", "CIAO"];
+    let i = 0;
+    let j = 0;
+    let currentWord = "";
+    let isDeleting = false;
+    const typingSpeed = 150;
+    const deletingSpeed = 100;
+    const pauseBetweenWords = 1000;
+
+    function type() {
+      const display = document.getElementById("type");
+      currentWord = words[i];
+
+      if (isDeleting) {
+        display.textContent = currentWord.substring(0, j--);
+      } else {
+        display.textContent = currentWord.substring(0, j++);
+      }
+
+      if (!isDeleting && j === currentWord.length + 1) {
+        isDeleting = true;
+        setTimeout(type, pauseBetweenWords);
+        return;
+      } else if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % words.length;
+      }
+
+      setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
+    }
+
+    type();
+  </script>
+
+
+
+        <h1>I'M TESSA ;)</h1>
+        <h1>I DESIGN INTERACTIONS AND <span>EXPERIENCES</span>.</h1>
     </section>
     
     
     <section class="design-process">
-        <img src="White Colorful Illustrative Mind Map Brainstorm.png" style="width:100%">
+        <img src="Advertising Hypereel Video in Black White Simple Style.gif" style="width:100%">
       </section>
     
     <section class="portfolio" id="portfolio">
-        <h2>My Portfolio</h2>
+        <h2>MY PORTFOLIO</h2>
         <div class="portfolio-grid">
             
             <div class="project">
@@ -183,7 +243,7 @@ nav {
             
             <div class="project">
                 <img src="2.png" style="width:100%">
-                <a href="https://www.canva.com/design/DAGfI77lrPo/P_f3ufwSNRDm0B6Yy90HYw/view?utm_content=DAGfI77lrPo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4f6df9451c" target="_blank">
+                <a href="https://drive.google.com/file/d/1eEG9JXCEo4Rl0306cz9CaRVODJ3tsm2_/view?usp=sharing" target="_blank">
                 <h3>TutorVerse</h3>
                 <p>Case study of a multi-channel personalized AI tutor.</p>
                 </a>
@@ -206,7 +266,7 @@ nav {
     </section>
     
     <section class="about" id="about">
-        <h2>Here's a bit more about me:</h2>
+        <h2>HERE'S A BIT MORE ABOUT ME:</h2>
         <p>I'm addicted to Duolingo. I love to give people book recommendations. My preferred form of communication is movie quotes, but my passion is dance.</p>
         <p>Growing up as a dancer, I’ve spent years observing, interpreting, and creating meaningful movements, and I’ve come to realize how deeply the principles of movement and flow apply to the design of digital experiences.</p>
         <p>Dance has taught me to think about space, rhythm, and transitions—qualities that are essential in interaction design. When performing or choreographing, I find it imperative to consider how each gesture or movement connects with the next, how it feels in space, and how it influences the overall experience for an audience. In the same vein, as an interaction designer and user researcher, I approach digital interfaces with a similar mindset: designing smooth transitions, intuitive flows, and creating engaging, user-centric experiences that feel natural and responsive.</p>
