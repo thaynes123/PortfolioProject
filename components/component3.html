@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Tessa Haynes: Mini-Design System: Components</title>
+    <link rel="icon" href="favicon copy.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/sidebars.css" rel="stylesheet">
+
+
+     <!--Google Fonts-->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Lato&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400&family=Libre+Franklin:wght@600&display=swap" rel="stylesheet">
+
+
+ <style type="text/css">
+  html {
+    font-size: 100%;
+  }
+  body {
+    --text-size-80: 0.563rem;
+    --text-size-90: 0.75rem;
+    --text-size-100: 1rem;
+    --text-size-200: 1.333rem;
+    --text-size-300: 1.777rem;
+    --text-size-400: 2.369rem;
+    --text-size-500: 3.157rem;
+    --text-size-600: 4.209rem;
+    --text-size-700: 5.61rem;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #222222;
+    background: #FFFFFF;
+  }
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.022em;
+  }
+  p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  small {
+    font-size: var(--text-size-90);
+  }
+  h6, .h6 {
+    font-size: var(--text-size-200);
+  }
+  h5, .h5 {
+    font-size: var(--text-size-300);
+  }
+  h4, .h4 {
+    font-size: var(--text-size-400);
+  }
+  h3, .h3 {
+    font-size: var(--text-size-500);
+  }
+  h2, .h2 {
+    font-size: var(--text-size-600);
+  }
+  h1, .h1 {
+    font-size: var(--text-size-700);
+  }
+  .text-size-80 { font-size: var(--text-size-80); }
+  .text-size-90 { font-size: var(--text-size-90); }
+  .text-size-100 { font-size: var(--text-size-100); }
+  .text-size-200 { font-size: var(--text-size-200); }
+  .text-size-300 { font-size: var(--text-size-300); }
+  .text-size-400 { font-size: var(--text-size-400); }
+  .text-size-500 { font-size: var(--text-size-500); }
+  .text-size-600 { font-size: var(--text-size-600); }
+  .text-size-700 { font-size: var(--text-size-700); }
+  
+  a:hover {color: navy; text-decoration-style: wavy;}
+  em {font-weight: 700;}
+
+  footer {background-color: #F2F2F2 !important;}
+  footer h6 {color: #8C374E}
+  footer a { color: #495057 !important; }
+  footer a:hover { opacity: 0.7; }
+
+  footer a:hover,
+footer a:focus {
+  color: #F2541B !important;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity .15s;
+}
+footer .bi { transition: transform .2s; }
+footer .bi:hover { transform: translateY(-3px); }
+  
+  </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-success border-bottom-0  sticky-top">
+        <!-- Navbar toggle button (hamburger icon) -->
+       
+            
+            <button class="navbar-toggler d-block d-md-none navbar-hieght"
+                type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebar"
+                aria-controls="sidebar">
+                 <span class="navbar-toggler-icon"></span>
+            </button>
+        
+    </nav>
+
+    </nav>
+<!-- This topbar toggle to the off canvas -->
+    <div class="offcanvas offcanvas-start bg-success d-md-block" 
+        tabindex="-1" id="sidebar"
+        aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+        
+          <div class="d-flex align-items-center text-center pb-3">
+            <img src="logo copy.png" alt="Logo" class="img-fluid" style="max-width: 180px;">
+          </div>
+            <button type="button"
+                    class="btn-close text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close">
+            </button>
+        </div>
+        <div class="offcanvas-body ">
+            <ul class="nav flex-column">
+                <ul class="list-unstyled ps-0">
+                  <li class="mb-1">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      <li><a href="../index.html" class="link-dark d-inline-flex text-decoration-none rounded">
+                        <div class = "offCanvas-home"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                          </svg>
+                          Home</div>
+
+                      </a></li>
+                      </ul>
+                  </li>
+                    <li class="mb-1">
+                      <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                      data-bs-toggle="collapse" data-bs-target="#foundations-collapse" aria-expanded="false">
+                      Foundations
+                      </button>
+                      <div class="collapse" id="foundations-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                          <li><a href="../foundation/type.html" class="link-dark d-inline-flex text-decoration-none rounded ">Typography</a></li>
+                          <li><a href="../foundation/color.html" class="link-dark d-inline-flex text-decoration-none rounded">Color</a></li>
+                          <li><a href="../foundation/logo.html" class="link-dark d-inline-flex text-decoration-none rounded">Logo</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                        data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
+                         Components
+                        </button>
+                        <div class="collapse  show" id="components-collapse">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="component1.html" class="link-dark d-inline-flex text-decoration-none rounded">Navigation</a></li>
+                            <li><a href="component2.html" class="link-dark d-inline-flex text-decoration-none rounded">Cards</a></li>
+                            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"><span class = "activeLink rounded">Footer</span></a></li>
+                     
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                        data-bs-toggle="collapse" data-bs-target="#patterns-collapse" aria-expanded="false">
+                          Page Patterns
+                        </button>
+                        <div class="collapse" id="patterns-collapse">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="../patterns/page1.html" class="link-dark d-inline-flex text-decoration-none rounded">Homepage</a></li>
+                            <li><a href="../patterns/page2.html" class="link-dark d-inline-flex text-decoration-none rounded">Case Study</a></li>
+                    </ul>
+            </ul>
+        </div>
+    </div>
+<!-- This is the sidebar menu -->
+    <div class="container-fluid ">
+        <div class="row">
+            <nav id="sidebarMenu"
+                class="col-md-3 col-lg-2 d-none d-md-block bg-light sidebar shadow">
+                <div class="position-sticky bg-success vh-100">
+                    <div class="pt-3">
+                    
+                      <a href="../index.html" class="d-flex align-items-center text-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+    
+                        <div class="d-flex align-items-center text-center pb-3">
+                          <img src="logo copy.png" alt="Logo" class="img-fluid" style="max-width: 180px;">
+                        </div>
+                      </a>
+                        <ul class="nav flex-column">
+                            <ul class="list-unstyled ps-0">
+                              
+                                <li class="mb-1">
+                                  <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                                  data-bs-toggle="collapse" data-bs-target="#foundations-collapse" aria-expanded="false">
+                                  Foundations
+                                  </button>
+                                  <div class="collapse" id="foundations-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                      <li><a href="../foundation/type.html" class="link-dark d-inline-flex text-decoration-none rounded">Typography</a></li>
+                                      <li><a href="../foundation/color.html" class="link-dark d-inline-flex text-decoration-none rounded">Color</a></li>
+                                      <li><a href="../foundation/logo.html" class="link-dark d-inline-flex text-decoration-none rounded">Logo</a></li>
+                                    </ul>
+                                  </div>
+                                </li>
+                                <li class="mb-1">
+                                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                                    data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
+                                     Components
+                                    </button>
+                                    <div class="collapse  show" id="components-collapse">
+                                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="component1.html" class="link-dark d-inline-flex text-decoration-none rounded">Navigation</a></li>
+                                        <li><a href="component2.html" class="link-dark d-inline-flex text-decoration-none rounded">Cards</a></li>
+                                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"><span class = "activeLink rounded">Footer</span></a></li>
+                                 
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li class="mb-1">
+                                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                                    data-bs-toggle="collapse" data-bs-target="#patterns-collapse" aria-expanded="false">
+                                      Page Patterns
+                                    </button>
+                                    <div class="collapse" id="patterns-collapse">
+                                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="../patterns/page1.html" class="link-dark d-inline-flex text-decoration-none rounded">Homepage</a></li>
+                                        <li><a href="../patterns/page2.html" class="link-dark d-inline-flex text-decoration-none rounded">Case Study</a></li>
+                                </ul>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 ">
+         
+      <!-- Page Content  -->
+      <div class = "container-fluid overflow-auto">
+        <div class = "row p-5">
+          <div id="content">
+            <h2>Footer</h2>
+            <p>The footer displays navigation, social media & contact links, and copyright information. The footer must remain at the bottom of every page.</p>
+            <h5>Accessibility Considerations</h5>
+            <p>The semantic footer element helps assistive technologies (screen readers, voice navigation) understand that this section contains site-level information and navigation. This improves page structure for anyone using screen readers or browsers with accessibility settings. <br> Icons alone are not accessible because screen readers can’t infer meaning visually,
+
+              and using the aria-label gives a text alternative, so users hear “LinkedIn” instead of “link.”</p>
+
+            <footer class="text-dark pt-5 pb-4 mt-5">
+              <div class="container">
+            
+                <div class="row gy-4 ps-5">
+            
+                  <!-- Brand / Name -->
+                  <div class="col-12 col-md-4">
+                    <h4 class="fw-bold">Tessa Haynes</h4>
+                    <p class="text-muted small mb-2">
+                      Designer • Researcher • Creative Developer
+                    </p>
+          
+                  </div>
+            
+                  <!-- Footer Nav Links -->
+                  <div class="col-6 col-md-4">
+                    <h6 class="fw-semibold text-uppercase small">Navigation</h6>
+                    <ul class="list-unstyled">
+                      <li><a href="#projects" class="text-muted text-decoration-none">Home</a></li>
+                      <li><a href="#about" class="text-muted text-decoration-none">About</a></li>
+                      <li><a href="#resume" class="text-muted text-decoration-none">Resume</a></li>
+                    </ul>
+                  </div>
+            
+                  <!-- Social Icons -->
+                  <div class="col-6 col-md-4">
+                    <h6 class="fw-semibold text-uppercase small">Connect</h6>
+            
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a href="#" aria-label="LinkedIn" class="text-dark fs-5">
+                          <i class="bi bi-linkedin"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" aria-label="GitHub" class="text-dark fs-5">
+                          <i class="bi bi-github"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" aria-label="Email" class="text-dark fs-4">
+                          <i class="bi bi-envelope-fill"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" aria-label="Instagram" class="text-dark fs-5">
+                          <i class="bi bi-instagram"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+            
+                </div>
+            
+                <hr class="border-secondary">
+            
+                <p class="text-center text-muted small mb-0">
+                  © 2025 Tessa Haynes — All Rights Reserved.
+                </p>
+            
+              </div>
+            </footer>
+
+            <div class="col">
+              <h5>Code</h5>
+            </div>
+
+
+             <!-- Code example - this is what the prism.js and css are for added in this page - replace: all '<' with &lt; and  '>' with &gt; and all quotes with &quot; -->
+
+      <div class="col code-background ">
+        <pre class="language-markup"><code>
+          &lt;footer class="text-dark pt-5 pb-4 mt-5"&gt;
+          &lt;div class="container"&gt;
+        
+            &lt;div class="row gy-4 ps-5"&gt;
+        
+              &lt;!-- Brand / Name --&gt;
+              &lt;div class="col-12 col-md-4"&gt;
+                &lt;h4 class="fw-bold"&gt;Tessa Haynes&lt;/h4&gt;
+                &lt;p class="text-muted small mb-2"&gt;
+                  Designer • Researcher • Creative Developer
+                &lt;/p&gt;
+              &lt;/div&gt;
+        
+              &lt;!-- Footer Nav Links --&gt;
+              &lt;div class="col-6 col-md-4"&gt;
+                &lt;h6 class="fw-semibold text-uppercase small"&gt;Navigation&lt;/h6&gt;
+                &lt;ul class="list-unstyled"&gt;
+                  &lt;li&gt;&lt;a href="#projects" class="text-muted text-decoration-none"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#about" class="text-muted text-decoration-none"&gt;About&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#resume" class="text-muted text-decoration-none"&gt;Resume&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+        
+              &lt;!-- Social Icons --&gt;
+              &lt;div class="col-6 col-md-4"&gt;
+                &lt;h6 class="fw-semibold text-uppercase small"&gt;Connect&lt;/h6&gt;
+        
+                &lt;ul class="list-inline"&gt;
+                  &lt;li class="list-inline-item"&gt;
+                    &lt;a href="#" aria-label="LinkedIn" class="text-dark fs-5"&gt;
+                      &lt;i class="bi bi-linkedin"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class="list-inline-item"&gt;
+                    &lt;a href="#" aria-label="GitHub" class="text-dark fs-5"&gt;
+                      &lt;i class="bi bi-github"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class="list-inline-item"&gt;
+                    &lt;a href="#" aria-label="Email" class="text-dark fs-4"&gt;
+                      &lt;i class="bi bi-envelope-fill"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li class="list-inline-item"&gt;
+                    &lt;a href="#" aria-label="Instagram" class="text-dark fs-5"&gt;
+                      &lt;i class="bi bi-instagram"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/div&gt;
+        
+            &lt;/div&gt;
+        
+            &lt;hr class="border-secondary"&gt;
+        
+            &lt;p class="text-center text-muted small mb-0"&gt;
+              © 2025 Tessa Haynes — All Rights Reserved.
+            &lt;/p&gt;
+        
+          &lt;/div&gt;
+        &lt;/footer&gt;
+          </code>
+          </pre><!-- Code example -->
+     
+            
+
+ 
+    </div><!-- col -->
+    </div><!-- Row  -->
+      </div><!-- Container -->
+      </div>      <!-- Content  -->
+
+               
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Tessa Haynes: Mini-Design System: Color</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/sidebars.css" rel="stylesheet">
+
+    <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400&family=Libre+Franklin:wght@600&display=swap" rel="stylesheet">
+  
+  <style type="text/css">
+    /* make cards same height in a row */
+    .card.h-100 { display: flex; flex-direction: column; }
+    .card-body { flex: 1 1 auto; }
+
+    /* swatch area */
+    .swatch {
+      height: 140px;
+      border-radius: .5rem;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: .95rem;
+    }
+
+    /* small helper for the hex button */
+    .hex-btn {
+      font-family: monospace;
+      letter-spacing: 0.02em;
+    }
+
+    /* subtle caret in copy button */
+    .btn-copy:after {
+      content: " ⧉";
+      opacity: 0.7;
+      margin-left: .25rem;
+    }
+
+    /* better focus for accessibility */
+    .btn:focus, .hex-btn:focus {
+      outline: 3px solid rgba(13,110,253,0.25);
+      outline-offset: 2px;
+    }
+
+  html {
+    font-size: 100%;
+  }
+  body {
+    --text-size-80: 0.563rem;
+    --text-size-90: 0.75rem;
+    --text-size-100: 1rem;
+    --text-size-200: 1.333rem;
+    --text-size-300: 1.777rem;
+    --text-size-400: 2.369rem;
+    --text-size-500: 3.157rem;
+    --text-size-600: 4.209rem;
+    --text-size-700: 5.61rem;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #222222;
+    background: #FFFFFF;
+  }
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.022em;
+  }
+  p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  small {
+    font-size: var(--text-size-90);
+  }
+  h6, .h6 {
+    font-size: var(--text-size-200);
+  }
+  h5, .h5 {
+    font-size: var(--text-size-300);
+  }
+  h4, .h4 {
+    font-size: var(--text-size-400);
+  }
+  h3, .h3 {
+    font-size: var(--text-size-500);
+  }
+  h2, .h2 {
+    font-size: var(--text-size-600);
+  }
+  h1, .h1 {
+    font-size: var(--text-size-700);
+  }
+  .text-size-80 { font-size: var(--text-size-80); }
+  .text-size-90 { font-size: var(--text-size-90); }
+  .text-size-100 { font-size: var(--text-size-100); }
+  .text-size-200 { font-size: var(--text-size-200); }
+  .text-size-300 { font-size: var(--text-size-300); }
+  .text-size-400 { font-size: var(--text-size-400); }
+  .text-size-500 { font-size: var(--text-size-500); }
+  .text-size-600 { font-size: var(--text-size-600); }
+  .text-size-700 { font-size: var(--text-size-700); }
+  
+  a:hover {color: navy; text-decoration-style: wavy;}
+  em {font-weight: 700;}
+  
+  </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-success border-bottom-0  sticky-top">
+        <!-- Navbar toggle button (hamburger icon) -->
+       
+            
+            <button class="navbar-toggler d-block d-md-none navbar-hieght"
+                type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebar"
+                aria-controls="sidebar">
+                 <span class="navbar-toggler-icon"></span>
+            </button>
+        
+    </nav>
+
+    </nav>
+<!-- This topbar toggle to the off canvas -->
+    <div class="offcanvas offcanvas-start bg-success d-md-block" 
+        tabindex="-1" id="sidebar"
+        aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+        
+          <div class="d-flex align-items-center text-center pb-3">
+            <img src="logo copy.png" alt="Logo" class="img-fluid" style="max-width: 180px;">
+          </div>
+            <button type="button"
+                    class="btn-close text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close">
+            </button>
+        </div>
+        <div class="offcanvas-body ">
+            <ul class="nav flex-column">
+                <ul class="list-unstyled ps-0">
+                  <li class="mb-1">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                      <li><a href="../index.html" class="link-dark d-inline-flex text-decoration-none rounded">
+                        <div class = "offCanvas-home"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                          </svg>
+                          Home</div>
+
+                      </a></li>
+                      </ul>
+                  </li>
+                    <li class="mb-1">
+                      <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                      data-bs-toggle="collapse" data-bs-target="#foundations-collapse" aria-expanded="false">
+                      Foundations
+                      </button>
+                      <div class="collapse show" id="foundations-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                          <li><a href="type.html" class="link-dark d-inline-flex text-decoration-none rounded">Typography</a></li>
+                          <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"><span class = "activeLink rounded">Color</span></a></li>
+                          <li><a href="logo.html" class="link-dark d-inline-flex text-decoration-none rounded">Logo</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                        data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
+                         Components
+                        </button>
+                        <div class="collapse" id="components-collapse">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="../components/component1.html" class="link-dark d-inline-flex text-decoration-none rounded">Navigation</a></li>
+                            <li><a href="../components/component2.html" class="link-dark d-inline-flex text-decoration-none rounded">Cards</a></li>
+                            <li><a href="../components/component3.html" class="link-dark d-inline-flex text-decoration-none rounded">Footer</a></li>
+                     
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="mb-1">
+                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                        data-bs-toggle="collapse" data-bs-target="#patterns-collapse" aria-expanded="false">
+                          Page Patterns
+                        </button>
+                        <div class="collapse" id="patterns-collapse">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="../patterns/page1.html" class="link-dark d-inline-flex text-decoration-none rounded">Homepage</a></li>
+                            <li><a href="../patterns/page2.html" class="link-dark d-inline-flex text-decoration-none rounded">Case Study</a></li>
+                    </ul>
+            </ul>
+        </div>
+    </div>
+<!-- This is the sidebar menu -->
+    <div class="container-fluid ">
+        <div class="row">
+            <nav id="sidebarMenu"
+                class="col-md-3 col-lg-2 d-none d-md-block bg-light sidebar shadow">
+                <div class="position-sticky bg-success vh-100">
+                    <div class="pt-3">
+                    
+                      <a href="../index.html" class="d-flex align-items-center text-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+    
+                        <div class="d-flex align-items-center text-center pb-3">
+                          <img src="logo copy.png" alt="Logo" class="img-fluid" style="max-width: 180px;">
+                        </div>
+                      </a>
+                        <ul class="nav flex-column">
+                            <ul class="list-unstyled ps-0">
+                              
+                                <li class="mb-1">
+                                  <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                                  data-bs-toggle="collapse" data-bs-target="#foundations-collapse" aria-expanded="false">
+                                  Foundations
+                                  </button>
+                                  <div class="collapse show" id="foundations-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                      <li><a href="type.html" class="link-dark d-inline-flex text-decoration-none rounded">Typography</a></li>
+                                      <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded"><span class = "activeLink rounded">Color</span></a></li>
+                                      <li><a href="logo.html" class="link-dark d-inline-flex text-decoration-none rounded">Logo</a></li>
+                                    </ul>
+                                  </div>
+                                </li>
+                                <li class="mb-1">
+                                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                                    data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
+                                     Components
+                                    </button>
+                                    <div class="collapse" id="components-collapse">
+                                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="../components/component1.html" class="link-dark d-inline-flex text-decoration-none rounded">Navigation</a></li>
+                                        <li><a href="../components/component2.html" class="link-dark d-inline-flex text-decoration-none rounded">Cards</a></li>
+                                        <li><a href="../components/component3.html" class="link-dark d-inline-flex text-decoration-none rounded">Footer</a></li>
+                                 
+                                      </ul>
+                                    </div>
+                                  </li>
+                                  <li class="mb-1">
+                                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                                    data-bs-toggle="collapse" data-bs-target="#patterns-collapse" aria-expanded="false">
+                                      Page Patterns
+                                    </button>
+                                    <div class="collapse" id="patterns-collapse">
+                                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="../patterns/page1.html" class="link-dark d-inline-flex text-decoration-none rounded">Homepage</a></li>
+                                        <li><a href="../patterns/page2.html" class="link-dark d-inline-flex text-decoration-none rounded">Case Study</a></li>
+                                </ul>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 ">
+              <!-- Page Content  -->
+               <div class = "container-fluid overflow-auto">
+                   <div class = "row p-5">
+                  <div id="content">
+                     <h2>Color Palette</h2>
+         
+        </div></div></div>
+         <!-- Grid: change the palette array in JS to customize colors -->
+    <div id="paletteGrid" class="row g-3">
+      <!-- cards are inserted by JS -->
+    </div>
+
+    <footer class="mt-4 text-muted small">
+     
+    </footer>
+
+         </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </script>
+
+    <!-- Bootstrap JS (needed for tooltips if added later) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Palette: { name, hex, usage (optional) }
+    const palette = [
+      { name: "Primary Purple", hex: "#8C374E", usage: "Primary brand color, links, and emphasized text" },
+      { name: "Primary Green", hex: "#3F8C44", usage: "Primary brand color and links" },
+      { name: "Primary Orange", hex: "#F2541B", usage: "Primary brand color" },
+      { name: "Soft Gold", hex: "#F2C230", usage: "Brand accent color and card links" },
+      { name: "Bright Yellow", hex: "#F2E205", usage: "Brand accent color and navigation" },
+      { name: "Light Purple", hex: "#F2AEEE", usage: "Brand accent color and links" },
+      { name: "Background Off-White", hex: "#F2F2F2", usage: "Cards & surfaces" },
+      { name: "Light Gray", hex: "#D9D9D9", usage: "Cards, surfaces, and tertiary text" } ,
+      { name: "Dark Gray", hex: "#595859", usage: "Cards, surfaces, and secondary text" } ,
+      { name: "Black", hex: "#0D0D0D", usage: "Primary text" }
+    ];
+
+    // Utility: check contrast luminance to choose light/dark text
+    function luminance(hex) {
+      // convert #rrggbb to [r,g,b] 0..1
+      const r = parseInt(hex.substr(1,2),16)/255;
+      const g = parseInt(hex.substr(3,2),16)/255;
+      const b = parseInt(hex.substr(5,2),16)/255;
+      const map = v => v <= 0.03928 ? v/12.92 : Math.pow((v+0.055)/1.055, 2.4);
+      return 0.2126*map(r) + 0.7152*map(g) + 0.0722*map(b);
+    }
+    function readableOn(hex) {
+      // returns "dark" or "light" suggesting which text color is readable
+      const L = luminance(hex);
+      // WCAG approximate threshold for light text: L < 0.179 gives good contrast with white
+      return L < 0.179 ? "light" : "dark";
+    }
+
+    // Render cards
+    const grid = document.getElementById('paletteGrid');
+
+    palette.forEach(color => {
+      const readable = readableOn(color.hex);
+      // responsive columns: col-12 (xs), col-sm-6, col-md-4, col-lg-3
+      const col = document.createElement('div');
+      col.className = 'col-12 col-sm-6 col-md-4 col-lg-3';
+
+      col.innerHTML = `
+        <div class="card h-100 shadow-sm" role="group" aria-label="${color.name} color card">
+          <div class="card-body d-flex flex-column">
+            <div class="swatch mb-3" style="background: ${color.hex}; color: ${readable === 'light' ? '#fff' : '#000'};">
+              
+            </div>
+
+            <h2 class="h6 mb-1">${color.name}</h2>
+            <p class="mb-2 text-muted small">${color.usage ?? ''}</p>
+
+            <div class="mt-auto d-flex align-items-center justify-content-between gap-2">
+              <button class="btn btn-sm btn-outline-secondary hex-btn" type="button" aria-label="Copy ${color.hex}" data-hex="${color.hex}">
+                ${color.hex}
+              </button>
+
+              <div class="d-flex align-items-center gap-2">
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      grid.appendChild(col);
+    });
+
+    // Delegate click to copy buttons
+    document.addEventListener('click', async (e) => {
+      const btn = e.target.closest('[data-hex]');
+      if (!btn) return;
+      const hex = btn.getAttribute('data-hex');
+      try {
+        await navigator.clipboard.writeText(hex);
+        // give visual feedback
+        const original = btn.innerHTML;
+        btn.innerHTML = 'Copied!';
+        setTimeout(() => btn.innerHTML = original, 1200);
+      } catch (err) {
+        // fallback: select temporary input
+        const tmp = document.createElement('input');
+        tmp.value = hex;
+        document.body.appendChild(tmp);
+        tmp.select();
+        try { document.execCommand('copy'); }
+        catch (ex) { /* ignore */ }
+        document.body.removeChild(tmp);
+        const original = btn.innerHTML;
+        btn.innerHTML = 'Copied!';
+        setTimeout(() => btn.innerHTML = original, 1200);
+      }
+    });
+
+    // Keyboard: Allow Enter/Space on hex button elements
+    document.addEventListener('keydown', (e) => {
+      const el = e.target;
+      if ((e.key === 'Enter' || e.key === ' ') && el && el.hasAttribute('data-hex')) {
+        e.preventDefault();
+        el.click();
+      }
+    });
+  </script>
+</body>
+
+</html>
